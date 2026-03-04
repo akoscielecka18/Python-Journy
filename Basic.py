@@ -99,6 +99,100 @@ has_criminal_record = False
 if has_high_income and not has_criminal_record:
     print("Eligible for loan")
 
+#comparison operators
+
+temp =30
+if temp > 100:
+    print("too hot")
+else:
+    print("ok")
+
+#zadnie give your weight
+
+weight = input('Weight: ')
+par = input('(L)bs or (K)g: ')
+l = int(weight) * 0.45
+k = int(weight) /2.2
+
+if par == 'L':
+    print(k)
+else:
+    print(l)
+
+#loops
+i=1
+while i<=5:
+    print('*' * i)
+    i=i+1
+print("Done")
+
+#Guessing game
+secret_number = 9
+i=0
+j= 3
+while i<j:
+    guess = int(input("Guess: "))
+    i += 1
+    if guess == secret_number:
+        print('Correct')
+        break
+else:
+    print('Wrong')
+
+#car game
+
+
+#loops
+
+for item in ['Mosh', 'John', 'Sarah']:
+    print(item)
+
+for item in range(10):
+    print(item)
+
+for item in range(5, 10,2):
+    print(item)
+
+#zad Calculate the price of all items in the bag
+prices = [10, 20, 30]
+total = 0
+for item in prices:
+    total += item
+print(total)
+
+#nested loops
+for x in range(4):
+    for y in range(3):
+        print(f'({x}, {y})')
+
+#print letter F using exes
+
+numbers = [5, 2, 5, 2, 2]
+for item in numbers:
+    output =''
+    for y in range(item):
+        output += 'x'
+    print(output)
+
+#lists
+
+names = ['John', 'Anna', 'Julia', 'Simon']
+print(names[1])
+
+lists = [2, 4, 5, 6, 70, 33]
+max = numbers[0]
+for i in lists:
+    if i > max :
+        max = i
+print(max)
+
+
+
+
+
+
+
+
 
 
 
