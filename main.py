@@ -95,4 +95,47 @@ plt.figure()
 nx.draw(G3, with_labels=True)
 plt.show()
 
-# Part 2:
+# Part 3:
+#adding attributes to nodes and edges
+G = nx.Graph()
+G.add_node("A", Age =12, Gender = "F")
+G.add_node("B", Age =18, Gender = "M")
+G.add_node("C", Age =19, Gender = "F")
+G.add_node("D", Age =20, Gender = "M")
+G.add_node("E", Age =21, Gender = "F")
+
+G.add_edge("A", "B", weight = 3)
+G.add_edge("B", "C", weight = 0.5)
+G.add_edge("C", "D", weight = 6)
+G.add_edge("D", "E", weight = 12)
+G.add_edge("E", "A", weight = "PINK")
+
+#see what kind of features has node A
+print(G.nodes["A"])
+#see what kind of features has edge AB
+print(G.edges["A","B"])
+
+#naming graf
+G.graph["Name"] = "My Graph"
+print(G.graph)
+
+#other method to define attributes
+G1 = nx.Graph()
+G1.add_nodes_from([
+    ("A", {"Age": 12, "Gender": "F"}),
+    ("B", {"Age": 18, "Gender": "M"}),
+    ("C", {"Age": 19, "Gender": "F"}),
+    ("D", {"Age": 20, "Gender": "M"}),
+    ("E", {"Age": 21, "Gender": "F"})
+])
+
+G1.add_edges_from([
+    ("A", "B", {"weight": 3}),
+    ("B", "C", {"weight": 6}),
+    ("C", "D", {"weight": 12}),
+    ("D", "E", {"weight": 6}),
+    ("E", "F", {"weight": 12}),
+    ("F", "A", {"weight": 6})
+])
+
+print(G1.edges[("C","D")])
