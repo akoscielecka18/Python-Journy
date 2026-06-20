@@ -139,3 +139,30 @@ G1.add_edges_from([
 ])
 
 print(G1.edges[("C","D")])
+
+#Part 4
+#how to see all nodes in G1 graph
+for node in G1.nodes:
+    print(node)
+
+#how to see all attributes which nodes have
+for node in G1.nodes(data=True):
+    print(node)
+
+#how to see all attributes which edges have
+for edge in G1.edges(data=True):
+    print(edge)
+
+#how to show how many nodes/edges graph has
+print(G1.number_of_nodes())
+print(G1.number_of_edges())
+
+#how to calculate degree of each node
+for node in G1.nodes:
+    print(f"Degree({node}): {G1.degree(node)}")
+
+#how to calculate neighbors of each node
+for node in G1.nodes:
+    neighbor_list=[n for n in G1.neighbors(node)]
+    print(f"Neighbor({node}) = {neighbor_list}")
+
