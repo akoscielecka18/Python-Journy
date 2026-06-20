@@ -61,4 +61,38 @@ plt.figure()
 nx.draw(G,pos, with_labels=True)
 plt.show()
 
-# Part 1:
+# Part 2:
+#adding nodes
+G1=nx.Graph()
+G1.add_nodes_from(["A","B","C","D","E", "F"])
+
+#other way of adding edges
+G1.add_edges_from([("A","B"),("B","C"),("C", "D"), ("D", "E"), ("E", "F"), ("F", "A")])
+
+plt.figure()
+nx.draw(G1, with_labels=True)
+plt.show()
+
+#-----------------------------
+#other way to adding nodes
+G2=nx.Graph()
+G2.add_nodes_from("ABCDEFG")
+
+#other way of adding edges
+G2.add_edges_from(["AB","BC","CD","DE","EF","FG","GA"])
+plt.figure()
+nx.draw(G2, with_labels=True)
+plt.show()
+
+#-----------------------------
+#other way to adding nodes
+G3=nx.Graph()
+G3.add_nodes_from([1,2,3,4,5,6])
+
+#other way of adding edges
+G3.add_edges_from([(1,2),(2,3),(3,4),(4,5),(5,6),(6,1)])
+plt.figure()
+nx.draw(G3, with_labels=True)
+plt.show()
+
+# Part 2:
